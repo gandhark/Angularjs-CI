@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name almqueriesApp.controller:AboutCtrl
+ * @name angularJsApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the almqueriesApp
+ * Controller of the angularJsApp
  */
-angular.module('almqueriesApp')
+angular.module('angularJsApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

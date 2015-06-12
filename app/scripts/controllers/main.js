@@ -1,17 +1,14 @@
 'use strict';
-
-/**
- * @ngdoc function
- * @name almqueriesApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the almqueriesApp
- */
-angular.module('almqueriesApp')
+angular.module('mytodoApp',[])
   .controller('MainCtrl', function ($scope) {
-    $scope.todo = [
-      'Item1',
-      'Item2',
-      'Item3'
-    ];
+    $scope.todos = [];
+//Add to do task    
+$scope.addTodo = function () {
+      $scope.todos.push($scope.todo);
+      $scope.todo = '';
+    };
+//Remove To Do Task
+   $scope.removeTodo = function (index) {
+      $scope.todos.splice(index, 1);
+    };
   });

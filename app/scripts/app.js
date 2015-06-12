@@ -2,22 +2,22 @@
 
 /**
  * @ngdoc overview
- * @name almqueriesApp
+ * @name angularJsApp
  * @description
- * # almqueriesApp
+ * # angularJsApp
  *
  * Main module of the application.
  */
 angular
-  .module('almqueriesApp', [
+  .module('angularJsApp', [
     'ngAnimate',
-    'ngAria',
     'ngCookies',
-    'ngMessages',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mytodoApp',
+    'ui.sortable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
