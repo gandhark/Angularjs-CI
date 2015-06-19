@@ -290,7 +290,7 @@ module.exports = function (grunt) {
                 separator: '\n',
                 sonar: {
                     host: {
-                        url: 'http://localhost:9080'
+                        url: 'http://172.27.59.54:9080'
                     },
                     jdbc: {
                         url: 'jdbc:mysql://localhost:3306/sonar',
