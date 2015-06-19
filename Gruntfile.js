@@ -280,7 +280,49 @@ module.exports = function (grunt) {
       }
     },
 
-    svgmin: {
+    
+
+
+	  sonarRunner: {
+        analysis: {
+            options: {
+                debug: true,
+                separator: '\n',
+                sonar: {
+                    host: {
+                        url: 'http://localhost:9080'
+                    },
+                    jdbc: {
+                        url: 'jdbc:mysql://localhost:3306/sonar',
+                        username: 'sonar',
+                        password: 'sonar'
+                    },
+ 
+                    projectKey: 'sonar:grunt-sonar-runner:0.1.0',
+                    projectName: 'Grunt Sonar Runner',
+                    projectVersion: '0.10',
+                    sources: ['test'].join(','),
+                    language: 'js',
+                    sourceEncoding: 'UTF-8'
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+svgmin: {
       dist: {
         files: [{
           expand: true,
@@ -439,6 +481,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
-    'build'
+    'build','sonarRunner'
   ]);
 };
