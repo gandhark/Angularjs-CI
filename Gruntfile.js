@@ -490,7 +490,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-concat');
 //grunt.loadNpmTasks('grunt-minified');
 grunt.loadNpmTasks('grunt-sonar-runner');
-grunt.loadNpmTasks('jshint-html-reporter');
+//grunt.loadNpmTasks('jshint-html-reporter');
 
 
   grunt.registerTask('default', [
