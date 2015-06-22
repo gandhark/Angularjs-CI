@@ -288,7 +288,11 @@ module.exports = function (grunt) {
     
 
 
-	  sonarRunner: {
+	  
+
+
+
+sonarRunner: {
         analysis: {
             options: {
                 debug: true,
