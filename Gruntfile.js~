@@ -114,18 +114,26 @@ module.exports = function (grunt) {
       }
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      },
-      all: {
-        src: [
-          'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
-        ]
-      },
+
+
+
+
+
+
+
+
+
+ jshint: {    
+    options: {
+		jshintrc: '.jshintrc',
+      reporterOutput: ".jslint_errors.xml",
+      force: true,
+      reporter: "jslint"
+     },
+   all:{
+     src: ['app/**/*.js']
+
+  },
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
@@ -133,6 +141,27 @@ module.exports = function (grunt) {
         src: ['test/spec/{,*/}*.js']
       }
     },
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Empties folders to start fresh
     clean: {
@@ -293,15 +322,15 @@ module.exports = function (grunt) {
                         url: 'http://172.27.59.54:9080'
                     },
                     jdbc: {
-                        url: 'jdbc:mysql://localhost:3306/sonar',
+                        url: 'jdbc:mysql://172.27.59.54:3306/sonar',
                         username: 'sonar',
                         password: 'sonar'
                     },
  
-                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.2',
-                    projectName: 'Grunt Sonar Runner',
-                    projectVersion: '0.10',
-                    sources: ['test'].join(','),
+                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.7',
+                    projectName: 'Grunt Sonar Runner_GK12',
+                    projectVersion: '0.11',
+                    sources: ['app','test'].join(','),
                     language: 'js',
                     sourceEncoding: 'UTF-8'
                 }
@@ -485,6 +514,8 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-concat');
 //grunt.loadNpmTasks('grunt-minified');
 grunt.loadNpmTasks('grunt-sonar-runner');
+//grunt.loadNpmTasks('jshint-html-reporter');
+
 
   grunt.registerTask('default', [
     'newer:jshint',

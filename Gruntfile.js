@@ -114,23 +114,26 @@ module.exports = function (grunt) {
       }
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'},
-        //reporter: require('jshint-stylish','jshint-html-reporter'
-	//reporterOutput: 'jshint-report.html')
 
 
 
 
-      
-      all: {
-        src: [
-          'Gruntfile.js','app/**/*.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
-        ]
-      },
+
+
+
+
+
+ jshint: {    
+    options: {
+		jshintrc: '.jshintrc',
+      reporterOutput: ".jslint_errors.xml",
+      force: true,
+      reporter: "jslint"
+     },
+   all:{
+     src: ['app/**/*.js']
+
+  },
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
@@ -138,6 +141,27 @@ module.exports = function (grunt) {
         src: ['test/spec/{,*/}*.js']
       }
     },
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Empties folders to start fresh
     clean: {
