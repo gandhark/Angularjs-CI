@@ -116,13 +116,10 @@ module.exports = function (grunt) {
 
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
-
-	 all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
       options: {
         jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish','jshint-html-reporter'),
-	//reporterOutput: 'jshint-report.html'
-
+        reporter: require('jshint-stylish','jshint-html-reporter',
+	reporterOutput: 'jshint-report.html')
 
 
 
@@ -130,7 +127,7 @@ module.exports = function (grunt) {
       },
       all: {
         src: [
-          'Gruntfile.js','app/scripts/controllers/**/*.js','app/scripts/**/*.js',
+          'Gruntfile.js',
           '<%= yeoman.app %>/scripts/{,*/}*.js'
         ]
       },
@@ -306,10 +303,10 @@ module.exports = function (grunt) {
                         password: 'sonar'
                     },
  
-                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.4',
+                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.2',
                     projectName: 'Grunt Sonar Runner',
                     projectVersion: '0.10',
-                    sources: ['.'].join(','),
+                    sources: ['test'].join(','),
                     language: 'js',
                     sourceEncoding: 'UTF-8'
                 }
