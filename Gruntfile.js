@@ -119,7 +119,7 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish','jshint-html-reporter',
-	//reporterOutput: 'jshint-report.html')
+	reporterOutput: 'jshint-report.html')
 
 
 
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
       },
       all: {
         src: [
-          'Gruntfile.js',
+          'Gruntfile.js','app/**/*.js'
           '<%= yeoman.app %>/scripts/{,*/}*.js'
         ]
       },
@@ -288,11 +288,7 @@ module.exports = function (grunt) {
     
 
 
-	  
-
-
-
-sonarRunner: {
+	  sonarRunner: {
         analysis: {
             options: {
                 debug: true,
@@ -494,7 +490,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-concat');
 //grunt.loadNpmTasks('grunt-minified');
 grunt.loadNpmTasks('grunt-sonar-runner');
-//grunt.loadNpmTasks('jshint-html-reporter');
+grunt.loadNpmTasks('jshint-html-reporter');
 
 
   grunt.registerTask('default', [
