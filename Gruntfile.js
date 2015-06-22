@@ -118,7 +118,12 @@ module.exports = function (grunt) {
     jshint: {
       options: {
         jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        reporter: require('jshint-stylish','jshint-html-reporter',
+	reporterOutput: 'jshint-report.html')
+
+
+
+
       },
       all: {
         src: [
@@ -485,6 +490,8 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-concat');
 //grunt.loadNpmTasks('grunt-minified');
 grunt.loadNpmTasks('grunt-sonar-runner');
+grunt.loadNpmTasks('jshint-html-reporter');
+
 
   grunt.registerTask('default', [
     'newer:jshint',
