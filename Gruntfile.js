@@ -306,7 +306,7 @@ module.exports = function (grunt) {
                         password: 'sonar'
                     },
  
-                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.2',
+                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.3',
                     projectName: 'Grunt Sonar Runner',
                     projectVersion: '0.10',
                     sources: ['.'].join(','),
