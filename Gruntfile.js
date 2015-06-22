@@ -303,11 +303,11 @@ module.exports = function (grunt) {
                         password: 'sonar'
                     },
  
-                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.6',
-                    projectName: 'Grunt Sonar Runner_GK1',
-                    projectVersion: '0.10',
-                    sources: ['.'].join(','),
-                   // language: 'js',
+                    projectKey: 'sonar:grunt-sonar-runner:0.1.0.7',
+                    projectName: 'Grunt Sonar Runner_GK12',
+                    projectVersion: '0.11',
+                    sources: ['app','test'].join(','),
+                    language: 'js',
                     sourceEncoding: 'UTF-8'
                 }
             }
