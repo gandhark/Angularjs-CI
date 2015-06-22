@@ -309,7 +309,7 @@ module.exports = function (grunt) {
                     projectKey: 'sonar:grunt-sonar-runner:0.1.0.2',
                     projectName: 'Grunt Sonar Runner',
                     projectVersion: '0.10',
-                    sources: ['test'].join(','),
+                    sources: ['.'].join(','),
                     language: 'js',
                     sourceEncoding: 'UTF-8'
                 }
